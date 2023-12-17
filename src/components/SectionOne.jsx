@@ -4,12 +4,13 @@ import { RiSearchLine } from "react-icons/ri";
 import ListSectionOne from "./ListSectionOne";
 import { TbCaretUpDownFilled } from "react-icons/tb";
 import Button from "./Button";
-
-function SectionOne() {
+import ReactStars from 'react-stars'
+import { VscDebugRestart } from "react-icons/vsc";
+function SectionOne({setSearch, ratingChanged}) {
   return (
     <div className="section-one">
       <div className="search-section-one">
-        <input type="text" placeholder="Enter Keywords..."></input>
+        <input type="text" placeholder="Enter Keywords..." onChange={(e)=> {setSearch(e.target.value)}}></input>
         <div className="search-icon">
           <RiSearchLine size={20} color="rgb(41, 182, 246)" />
         </div>
@@ -40,20 +41,17 @@ function SectionOne() {
           </div>
         </div>
         <div className="elements-sec-one">
-          <div className="dropdown-parent">
-            <ListSectionOne title={"Rating"} />
-            <div className="dropdown">
-              <ul className="dropdown-menu">
-                <li>Any</li>
-                <li>From 9-10</li>
-                <li>From 8-9</li>
-                <li>From 7-8</li>
-                <li>From 6-7</li>
-                <li>From 5-6</li>
-              </ul>
-            </div>
+          <div className="rate-restart">
+        <ReactStars
+          count={5}
+          onChange={(newRating)=> {
+            ratingChanged(newRating)
+          }}
+          size={35}
+          half={true}
+          color2={'#ffd700'} />
+          <VscDebugRestart color="grey" size={30} onClick={()=> {ratingChanged(0)}}/>
           </div>
-
           <div className="dropdown-parent">
             <ListSectionOne title={"Sort By"} />
             <div className="dropdown">
