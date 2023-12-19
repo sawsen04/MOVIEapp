@@ -4,7 +4,7 @@
   border-top: unset;
   border-left: unset;
   border-right: unset;
-  height: 300px;
+  height: 800px;
   background-image: url(https://live.themewild.com/moplay/assets/img/breadcrumb/01.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -28,7 +28,7 @@
 }
 .hero-section {
   /* border: 5px white solid;*/
-  height: 300px;
+  height: 800px;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;

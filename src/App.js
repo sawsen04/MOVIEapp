@@ -1,24 +1,22 @@
-import React, {useState} from "react";
 import "./App.css";
-import HeroSection from "./components/HeroSection";
+import Home from "./pages/Home";
+/*import HeroSection from "./components/HeroSection";
 import NavBar from "./components/NavBar";
-import SectionOne from "./components/SectionOne";
-import SectionTwo from "./components/SectionTwo";
 import FooterOne from "./components/FooterOne";
-import FooterTwo from "./components/FooterTwo";
-
+import FooterTwo from "./components/FooterTwo"*/
+import { Routes, Route } from "react-router-dom";
+import PublicLayout from "./layouts/PublicLayout";
+import Movies from "./pages/Movies";
+import Movie from "./pages/Movie";
 function App() {
-  const [search, setSearch] = useState ("");
-  const [rate, ratingChanged] = useState (0);
   return (
-    <div className="App">
-      <NavBar />
-      <HeroSection />
-      <SectionOne setSearch= {setSearch} ratingChanged= {ratingChanged}/>
-      <SectionTwo  search={search} rate= {rate}/>
-      <FooterOne />
-      <FooterTwo />
-    </div>
+    <Routes>
+      <Route path="/" element={<PublicLayout />}>
+        <Route index element={<Home />} />
+        <Route path="Movies" element={<Movies />} />
+        <Route path="/Movie/:id" element={<Movie />} />
+      </Route>
+    </Routes>
   );
 }
 

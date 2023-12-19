@@ -4,6 +4,7 @@ import { RiSearchLine } from "react-icons/ri";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { PiSignInBold } from "react-icons/pi";
 import { RiArrowDownSLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 import Button from "./Button";
 function NavBar() {
   return (
@@ -17,8 +18,7 @@ function NavBar() {
       </div>
       <ul className="navbar-container-list">
         <li style={{ color: "#29B6F6" }}>
-          Home
-          <RiArrowDownSLine />
+          <Link to="/">Home</Link>
         </li>
         <li>
           Genre <RiArrowDownSLine />
@@ -30,7 +30,8 @@ function NavBar() {
           Pages <RiArrowDownSLine />
         </li>
         <li>
-          Movies <RiArrowDownSLine />
+          {" "}
+          <Link to="/Movies">Movies</Link>
         </li>
         <li>
           Tv Shows <RiArrowDownSLine />

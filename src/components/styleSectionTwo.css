@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .cards-container {
-    border: 2px black solid;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    width: 1400px;
-   padding: 60px 40px;
+  border: 2px black solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 1400px;
+  padding: 60px 40px;
 }
 .image img {
   border-radius: 20px;
@@ -37,7 +37,7 @@
 }
 .description {
   border: 1px black solid;
-  width:fit-content;
+  width: fit-content;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -54,7 +54,7 @@
   cursor: pointer;
 }
 .Border-cards-container {
-    background-color: rgb(6, 9, 15);
+  background-color: rgb(6, 9, 15);
 }
 .inputs {
   /*border: 2px white solid;*/
@@ -73,7 +73,7 @@
   align-items: center;
   height: 40px;
   font-size: 1rem;
-  color:  white;
+  color: white;
 }
 .add-movie {
   /*border: 1px white solid;*/
@@ -85,12 +85,12 @@
 }
 .btn-add {
   align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   font-family: Phantomsans, sans-serif;
   font-size: 20px;
@@ -117,4 +117,11 @@ btn-add:hover {
     font-size: 17px;
     min-width: 150px;
   }
+}
+.cart p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
 }
